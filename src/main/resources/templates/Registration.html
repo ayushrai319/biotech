@@ -1,0 +1,117 @@
+<html th:replace="~{base::layout(~{::main})}">
+   <body>
+      <main>
+      <div class="row">
+        <div class="col-sm-9  mx-auto py-4">
+          <div class="card shadow-lg p-4">
+            <div class="card-header bg-primary text-white">
+              <h4 class="mb-0"><i class="bi bi-person-fill"></i> Student Registration</h4>
+            </div>
+
+            <div class="card-body p-4">
+              <form method="post" enctype="multipart/form-data">
+                <div class="row g-3">
+                  
+                  <!-- Admin Provided Fields (Readonly) -->
+                  <div class="col-md-6">
+                    <label class="form-label"><i class="bi bi-hash"></i> Roll No</label>
+                    <input type="text" class="form-control" th:value="${student.rollNo}" readonly>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label"><i class="bi bi-person"></i> Name</label>
+                    <input type="text" class="form-control" th:value="${student.name}" readonly>
+                  </div>
+
+                  <div class="col-md-4">
+                    <label class="form-label"><i class="bi bi-journal"></i> Program</label>
+                    <input type="text" class="form-control" th:value="${student.program}" readonly>
+                  </div>
+
+                  <div class="col-md-4">
+                    <label class="form-label"><i class="bi bi-diagram-2"></i> Branch</label>
+                    <input type="text" class="form-control" th:value="${student.branch}" readonly>
+                  </div>
+
+                  <div class="col-md-4">
+                    <label class="form-label"><i class="bi bi-calendar"></i> Year</label>
+                    <input type="text" class="form-control" th:value="${student.year}" readonly>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label"><i class="bi bi-phone"></i> Contact No</label>
+                    <input type="text" class="form-control" th:value="${student.contactNo}" readonly>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label"><i class="bi bi-envelope"></i> Email</label>
+                    <input type="email" class="form-control" th:value="${student.email}" readonly>
+                  </div>
+
+                  <!-- Student Input Fields -->
+                  <div class="col-md-6">
+                    <label class="form-label"><i class="bi bi-person"></i> Father Name</label>
+                    <input type="text" name="fatherName" class="form-control" placeholder="Enter Father's Name" required>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label"><i class="bi bi-person"></i> Mother Name</label>
+                    <input type="text" name="motherName" class="form-control" placeholder="Enter Mother's Name" required>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label"><i class="bi bi-gender-ambiguous"></i> Gender</label>
+                    <select name="gender" class="form-select" required>
+                      <option value="">Select Gender</option>
+                      <option value="Male">Male</option>
+                      <option value="Female">Female</option>
+                      <option value="Other">Other</option>
+                    </select>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label"><i class="bi bi-geo-alt"></i> Address</label>
+                    <input type="text" name="address" class="form-control" placeholder="Enter Address" required>
+                  </div>
+                </div>
+                
+                <div class="row py-4">
+                	<div class="col-sm-5">
+                		<img alt="image not found" class="w-75" src="https://static.vecteezy.com/system/resources/previews/011/026/519/non_2x/scan-me-phone-tag-qrcode-scan-to-pay-with-mobile-app-qr-code-for-smartphone-isolated-illustration-on-a-white-background-illustration-vector.jpg">
+                	</div>
+                	<div class="col-md-7">
+                		<div class="row">
+                			<div class="col-md-12">
+			                    <label class="form-label"><i class="bi bi-receipt"></i> UTR No</label>
+			                    <input type="text" name="utrNo" class="form-control" placeholder="Enter UTR Number" required>
+			                 </div>
+			
+			                 <div class="col-md-12 mt-3">
+			                    <label class="form-label"><i class="bi bi-image"></i> Payment Screenshot</label>
+			                    <input type="file" name="file" class="form-control" accept="image/*" required>
+			                 </div>
+                		</div>
+                	</div>
+                </div>
+
+                <div class="text-center mt-4">
+                  <button type="submit" class="btn btn-success px-4">
+                    <i class="bi bi-check-circle"></i> Submit
+                  </button>
+                  <button type="reset" class="btn btn-secondary px-4">
+                    <i class="bi bi-x-circle"></i> Reset
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+        <!-- Bootstrap & Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  
+      </main>
+   </body>
+</html>

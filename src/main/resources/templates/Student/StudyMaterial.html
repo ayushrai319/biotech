@@ -1,0 +1,44 @@
+<html th:replace="~{Student/Studentbase :: layout(~{::main})}">
+  <body>
+    <main>
+      <div class="container mt-4">
+        <h2 class="mb-4">Study Materials</h2>
+
+        <div th:if="${#lists.isEmpty(studymaterials)}">
+          <p>No study materials available.</p>
+        </div>
+
+        <table class="table table-bordered" th:if="${!#lists.isEmpty(studymaterials)}">
+          <thead class="table-light">
+            <tr>
+              <th>#</th>
+              <th>Subject</th>
+              <th>Program</th>
+              <th>Branch</th>
+              <th>Year</th>
+              <th>File</th>
+              <th>Uploaded Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr th:each="material, iterStat : ${studymaterials}">
+              <td th:text="${iterStat.count}">1</td>
+              <td th:text="${material.subject}">Subject Name</td>
+              <td th:text="${material.program}">B.Tech</td>
+              <td th:text="${material.branch}">CSE</td>
+              <td th:text="${material.year}">2</td>
+              <td>
+                <a th:href="@{${material.fileUrl}}" target="_blank">View File</a>
+              </td>
+              <td th:text="${#temporals.format(material.uploadedDate, 'dd-MM-yyyy HH:mm')}">01-01-2025 10:00</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="mt-3">
+          <a th:href="@{/Student/Dashboard}" class="btn btn-secondary btn-sm">Back to Dashboard</a>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

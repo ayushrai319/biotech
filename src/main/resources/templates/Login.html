@@ -1,0 +1,39 @@
+<html th:replace="~{base :: layout (~{::main})}">
+     <body>
+             <main>
+                   <div class="row">
+                            <div class="col-sm-5 mx-auto">
+                                  <div class="card shadow my-5 rounded-5 border-0">
+                                      <div class="card-header rounded-top-5 bg-primary">
+                                           <h4 class="text-center text-white">Login Here</h4>
+                                      </div>
+                                           <div class="card-body px-5">
+                                           <form method="post">
+                                           <div class="mt-3">
+                                           <label>Select User Type</label>
+                                           <select class="form-conrol" name="userType" required>
+                                           <option value="">----Select User type----</option>
+                                           <option value="ADMIN">Admin</option>
+                                           <option value="STUDENT">Student</option>
+                                           </select>
+                                           </div>
+                                           <div class="mt-3">
+                                           <label>Enter Enrollment No/UserId</label>
+                                           <input type="text" class="form-control" name="username" placeholder="Enter Your Username/Email....." Required >
+                                           </div>
+                                           
+                                           <div class="mt-3">
+                                           <label>Enter Password</label>
+                                           <input type="password" class="form-control" name="password" placeholder="Enter Your Password...." required >
+                                           </div>
+                                           
+                                           <div class="mt-5 mb-4 text-center">
+                                           <button type="submit" class="btn btn-primary">Login</button>
+                                    </div>
+                                  </form>
+                                 </div>
+                            </div>
+                   </div>
+               </main>
+     </body>
+</html>

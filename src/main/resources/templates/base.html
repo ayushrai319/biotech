@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en" th:fragment="layout(content)">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container-fluid">
+    <div class="alert alert-primary p-0 m-0 text-center bg-primary text-white" width="100%" role="alert">
+   The Biotech Park Is Open From 10:00 am to 5:00 pm
+  </div>
+    	<!-- Navbar Start -->
+    	<div class="row py-1 align-items-center" style="background-image: linear-gradient(to right, rgb(0, 81, 195), rgb(15, 106, 3));">
+    		<div class="col-md-3 d-flex align-items-center text-white">
+    			<img alt="" width="55px" class="p-2" src="images/Biotech logo.jpg">
+    			<h4 class="fw-bold m-0 mt-2">
+    				Biotech Park, Lucknow
+    				<p style="font-size: 12px;">where cutting edge science prospers...</p>
+    			</h4>
+    		</div>
+    		<div class="col-md-9">
+    			<nav class="navbar navbar-expand-lg">
+				  <div class="container-fluid">
+				    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+				      <span class="navbar-toggler-icon"></span>
+				    </button>
+				    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+				      <div class="navbar-nav">
+				        <a class="nav-link text-white fw-bold active" aria-current="page" href="/">Home &nbsp; |</a>
+				        <a class="nav-link text-white fw-bold" href="#">The Park &nbsp; |</a>
+				        <a class="nav-link text-white fw-bold" href="#">Facilities &nbsp; |</a>
+				       
+				        <a class="nav-link text-white fw-bold" href="#">Success Stories &nbsp; |</a>
+				        <a class="nav-link text-white fw-bold" href="#">News & Events &nbsp; |</a>
+				        <a class="nav-link text-white fw-bold" href="/ContactUs">Contact Us</a>
+				        <a class="btn btn-primary rounded-pill mx-4 text-white" href="/Login">Login</a>
+				      </div>
+				    </div>
+				  </div>
+				</nav>
+			</div>
+    	</div>
+    	<!-- Navbar End -->
+    	
+    	<!-- Main Content Start -->
+    	<div th:replace="${content}" id="main">
+    		
+    	</div>
+    	<!-- Main Content End -->
+    	
+    	
+    	<!-- Footer Start -->
+    	<div class="row py-5 text-white" style="background-image: linear-gradient(to right, rgb(0, 81, 195), rgb(15, 106, 3));">
+    		<div class="col-md-3 pb-5">
+    			<h4 class="fw-bold">Bio Tech Park, Lucknow</h4>
+    		</div>
+    		
+    		<div class="col-md-3 pb-5">
+    			<h4 class="fw-bold">Bio Tech Info</h4>
+    		</div>
+    		
+    		<div class="col-md-3 pb-5">
+    			<h4 class="fw-bold">Important Links</h4>
+    		</div>
+    		
+    		<div class="col-md-3 pb-5">
+    			<h4 class="fw-bold">Certification</h4>
+    		</div>
+    	</div>
+    	<!-- Footer End -->
+    </div>
+    
+    <script type ="text/javascript">
+       var msg = "[[${msg}]]";
+      if(msg != "") 
+      {
+    	  alert(msg);
+    
+      }
+      
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </body>
+</html>

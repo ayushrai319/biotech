@@ -1,0 +1,73 @@
+<html th:replace="~{Admin/Adminbase::layout(~{::main})}">
+  <body>
+    <main>
+			<div class="row">
+				<div class="col-sm-10 mx-auto">
+					<div class="card">
+						<div class="card-header bg-primary">
+							<h4 class="text-center text-white m-0">Add New Students</h4>
+						</div>
+						
+						<div class="card-body">
+							<form method="post">
+								<div class="row p-4">
+									<div class="col-sm-6 mt-3">
+										<label class="fw-bold">Enter Student Name</label>		
+										<input type="text" name="name" class="form-control" placeholder="Student Name..." required>	
+									</div>
+									<div class="col-sm-6 mt-3">
+										<label class="fw-bold">Enter Contact Number</label>
+										<input type="number" name="contactNo" class="form-control" placeholder="Enter ContactNo..." required="required">
+									</div>
+									<div class="col-sm-6 mt-3">
+										<label class="fw-bold">Enter Email</label>
+										<input type="email" name="email" class="form-control" placeholder="Enter Email..." required="required">
+									</div>
+									
+									<div class="col-sm-6 mt-3">
+										<label class="fw-bold">Select Prefered Course/Program</label>
+										<select name="program" class="form-control" required="required">
+											<option value="">--Select Course--</option>
+											<option value="B. Pharm">B. Pharm</option>
+											<option value="D. Pharm">D. Pharm</option>
+											<option value="Diplima">Diplima</option>
+											<option value="B. Tech">B .Tech</option>
+										</select>
+									</div>
+									
+									<div class="col-sm-6 mt-3">
+									<label class="fw-bold">Select Branch</label>
+									<select class="form-control" name="branch" required="required">
+									<option value="">--Select Branch--</option>
+									<option value="Pharmaceutical Chemistry">Pharmaceutical Chemistry</option>
+									<option value="Pharmacology">Pharmacology</option>
+									<option value="Clinical Pharmacy">Clinical Pharmacy</option>
+									<option value="Industrial Pharmacy">Industrial Pharmacy</option>
+									</select>
+									</div>
+									
+									<div class="col-sm-6 mt-3">
+									<label class="fw-bold">Select year</label>
+									<select class="form-control" name="year" required>
+									<option value="">--Select Year--</option>
+									<option value="First year">First Year</option>
+									<option value="Second Year">Second Year</option>
+									<option value="Third Year">Third Year</option>
+									<option value="Fourth Year">Fourth Year</option>
+									</select>
+									</div>	
+								
+								<div class="mt-5 text-center col-sm-12">
+								<button type="submit" class="btn btn-primary mx-auto">Add Student</button>
+								</div>
+									
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+	</body>
+</html>
+

@@ -1,0 +1,45 @@
+<html th:replace="base :: layout (~{::main})">
+    <body>
+               <main>
+                       <div class="row bg-dark bg-opacity-50">
+                       <div class="col-sm-12">
+                         <h3 class="fw-bold text-white text-center py-5">Contact Us</h3>
+                          </div>
+                         </div>
+                         
+                         <div class="row">
+                           <div class="col-md-7"></div>   <!--card information-->                   
+                            <div class="col-md-5 p-4" >
+                            <form method="post" th:object="${enquiry}">
+                            <div class="card p-4 shadow border-0">
+                            <div class="mt-3">
+                            <input type="text" name="name" class="form-control rounded-0" placeholder="Enter Your Name....">
+                            </div> 
+                              <div class="mt-3">
+                              <label >Select Your Gender</label><br/>
+                            <input type="radio" name="gender" value="male">male
+                             <input type="radio" name="gender" value="female">female
+                             <input type="radio" name="gender" value="other">other
+                            </div>
+                            <div class="mt-3">
+                           <input type="number" name="contactNo" class="form-control rounded-0" placeholder="Enter Your Contact Number.....">
+                            </div>
+                            <div class="mt-3">
+                            <input type="email" name="email" class="form-control rounded-0" placeholder="Enter Your Email">
+                            </div>
+                            <div class="mt-3">
+                            <input type="text" name="subject" class="form-control rounded-0" placeholder="Enter Enquiry Subject....">
+                            </div>
+                            <div class="mt-3">
+                            <textarea row="" cols="" name="message" class="form-control rounded-0" placeholder="Write Your Query Here...."></textarea>
+                            </div>
+                            <div class="mt-5 text-center"> 
+                              <button type="Submit" class="btn btn-Primary " >Submit</button>
+                             </div>
+                            </div>
+                            </form>
+                            </div>
+                              </div>
+               </main> 
+    </body>
+</html>

@@ -1,0 +1,76 @@
+<html th:replace="~{Admin/Adminbase::layout(~{::main})}">
+  <body>
+    <main>
+			<div class="row">
+				<div class="col-sm-9 mx-auto">
+					<div class="card">
+						<div class="card-header bg-primary">
+							<h4 class="text-center text-white m-0">Upload Study Material and Assignments</h4>
+						</div>
+						<div class="card-body">
+							<form method="post" enctype="multipart/form-data" th:object="${material}">
+								<div class="row p-4">
+									<div class="col-sm-6 mt-3">
+										<label class="fw-bold">Enter Subject</label>
+										<input type="text" name="subject" class="form-control" placeholder="Subject..." required>
+									</div>
+									
+									<div class="col-sm-6 mt-3">
+										<label class="fw-bold">Select Prefered Course/Program</label>
+										<select name="program" class="form-control" required="required">
+											<option value="">--Select Course--</option>
+											<option value="B. Pharm">B. Pharm</option>
+											<option value="D. Pharm">D. Pharm</option>
+											<option value="Diplima">Diplima</option>
+											<option value="B. Tech">B. Tech</option>
+										</select>
+									</div>
+									
+									<div class="col-sm-6 mt-3">
+										<label class="fw-bold">Select Branch</label>
+										<select class="form-control" name="branch" required>
+											<option value="">--Select Branch--</option>
+											<option value="Pharmaceutical Chemistry">Pharmaceutical Chemistry</option>
+											<option value="Pharmacology">Pharmacology</option>
+											<option value="Clinical Pharmacy">Clinical Pharmacy</option>
+											<option value="Industrial Pharmacy">Industrial Pharmacy</option>
+										</select>
+									</div>
+									
+									<div class="col-sm-6 mt-3">
+										<label class="fw-bold">Select Year</label>
+										<select class="form-control" name="year" required>
+											<option value="">--Select Year--</option>
+											<option value="First Year">First Year</option>
+											<option value="Second Year">Second Year</option>
+											<option value="Third Year">Third Year</option>
+											<option value="Fourth Year">Fourth Year</option>
+										</select>
+									</div>
+									
+									<div class="col-sm-6 mt-3">
+										<label class="fw-bold">Select Material Type</label>
+										<select class="form-control" name="materialType" required>
+											<option value="">--Select Material Type--</option>
+											<option value="ASSIGNMENT">Assignment</option>
+											<option value="STUDY_MATERIAL">StudyMaterial</option>
+										</select>
+									</div>
+									
+									<div class="col-sm-6 mt-3">
+										<label class="fw-bold">Select Material File</label>
+										<input type="file" name="file" class="form-control p-1" required>
+									</div>
+									
+									<div class="col-sm-12 text-center mt-5">
+										<button type="submit" class="btn btn-primary">Upload</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+    </main>
+  </body>
+</html>

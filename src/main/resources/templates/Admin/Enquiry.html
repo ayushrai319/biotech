@@ -1,0 +1,49 @@
+<html th:replace="~{Admin/Adminbase::layout(~{::main})}">
+  <body>
+    <main>
+    <div class="row">
+    <div class="col-sm-12">
+    <div class="card">
+    <div class="card-header bg-primary">
+    <h4 class="text-center text-white m-0" >Manage Enquiries</h4>
+    </div>
+    <div class="card-body">
+    <div class="table-responsive">
+    <table class="table table-bordered">
+      <thead>
+       <tr>
+       <th>Sr No.</th>
+       <th>Name</th>
+       <th>Contact No</th>
+       <th>Email</th>
+       <th>Gender</th>
+       <th>Subject</th>
+       <th>Message</th>
+       <th>Enquiry Date</th>
+       <th>Action</th>
+       </tr>
+      </thead> 
+      <tbody>
+         <tr th:each="enq, srno : ${enquiries}">
+           <td th:text="${srno.index+1}">1</td>
+           <td th:text="${enq.name}">Name</td>
+           <td th:text="${enq.contactNo}">9129811515</td>
+           <td th:text="${enq.email}">example@gmail.com</td>
+           <td th:text="${enq.gender}">male</td>
+           <td th:text="${enq.subject}" >Subject</td>
+           <td th:text="${enq.message}">Message</td>
+           <td  th:text="${enq.enquiryDate}">Date</td>
+           <td>
+           <a th:href="@{DeleteEnquiry(id = ${enq.id})}" class="btn btn-danger btn-sm" onclick="return confirm('Are you Sure want to Delete')">Delete</a>
+           </td>
+         </tr>
+      </tbody>
+    </table>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </main>
+  </body>
+</html>
