@@ -39,8 +39,8 @@ Before running this project, make sure you have the following installed:
 
 1. **Clone the repository**
    ```bash
-   git clone 
-   cd Online-Admission-System
+   git clone https://github.com/ayushrai319/biotech.git
+   cd biotech 
    ```
 
 2. **Build the project**
